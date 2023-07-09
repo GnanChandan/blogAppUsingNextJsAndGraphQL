@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import React,{useContext} from 'react'
-
-const Categories = [{name: 'React',slug: 'react'},{name: 'Web Development',slug: 'web-dev'}]
+import { getCategories } from '@/services'
 
 const Header = () => {
+  const Categories = await getCategories();
   return (
     <div className='container mx-auto px-10 mb-8'>
         <div className='border-b w-full inline-block border-blue-450 py-8'>
