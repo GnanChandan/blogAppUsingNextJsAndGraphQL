@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React,{useContext} from 'react'
 import { getCategories } from '@/services'
 
-const Header = () => {
+const Header = async () => {
   const Categories = await getCategories();
   return (
     <div className='container mx-auto px-10 mb-8'>
